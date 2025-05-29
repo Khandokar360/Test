@@ -48,6 +48,7 @@
           <th>Position</th>
           <th>Office</th>
           <th>Age</th>
+          <th>DOB</th>
           <th>Gender</th>
           <th>Start date</th>
           <th>End date</th>
@@ -59,6 +60,7 @@
           <td>System Architect</td>
           <td>Edinburgh</td>
           <td>61</td>
+          <td>1963/01/01</td>
           <td>Male</td>
           <td>2011/04/25</td>
           <td>2014/04/25</td>
@@ -68,6 +70,7 @@
           <td>Accountant</td>
           <td>Tokyo</td>
           <td>63</td>
+          <td>1961/01/01</td>
           <td>Male</td>
           <td>2011/07/25</td>
           <td>2014/07/25</td>
@@ -77,6 +80,7 @@
           <td>Customer Support</td>
           <td>New York</td>
           <td>27</td>
+          <td>1997/01/01</td>
           <td>Female</td>
           <td>2015/01/01</td>
           <td>2016/01/01</td>
@@ -94,7 +98,7 @@
     $(document).ready(function() {
       $('#example').DataTable({
         createdRow: function(row, data) {
-          var gender = String(data[4]).trim().toLowerCase();
+          var gender = String(data[5]).trim().toLowerCase();
           if (gender === 'male') {
             $(row).css('background-color', 'blue');
           } else {
